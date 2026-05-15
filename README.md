@@ -1,5 +1,7 @@
 # CRDMO Analyst Copilot
 
+[中文说明 / Chinese README](README_CN.md)
+
 CRDMO Analyst Copilot is a prototype AI equity research valuation agent built for the ACC102 group coursework project:
 
 **AI Equity Research Valuation Agent for the Pharmaceutical CRDMO Industry: A Case Study of WuXi AppTec**

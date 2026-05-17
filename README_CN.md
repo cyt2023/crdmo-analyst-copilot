@@ -32,19 +32,19 @@ CRDMO Analyst Copilot 是一个面向 ACC102 小组课程项目的 AI 股票研�
 
 ## 重要数据声明
 
-仓库中自带的药明康德财务数据是**样例数据**，仅用于原型演示。
+仓库中自带的药明康德财务数据现在已经替换为**基于公司官方披露整理的 2019-2023 历史真实数据**。
 
-这些数据：
+但这些数据仍然需要注意：
 
-- 不是审计数据
-- 不是最终提交可直接引用的数据
-- 不应被表述为公司真实已披露财务数字
+- 虽然来自公司官方披露，但仍应回到原始年报或公告再次核对
+- 已经适合课程原型演示，但正式提交时最好补充原始出处引用
+- 不应在没有注明来源的情况下直接当作最终研究底稿
 
-正式提交前，建议你们用以下来源替换样例数据：
+建议继续用于交叉核对的来源包括：
 
 - 药明康德年报
-- 中期报告
-- 投资者演示材料
+- 中报和季报
+- 年度业绩演示材料
 - 交易所公告
 - 可信金融数据库
 
@@ -65,6 +65,7 @@ CRDMO Analyst Copilot 是一个面向 ACC102 小组课程项目的 AI 股票研�
 /docs/demo_video_script.md
 /docs/coze_workflow_spec.md
 /docs/ai_usage_disclosure.md
+/docs/wuxi_data_sources.md
 /outputs/sample_output_pack.md
 /outputs/sample_dcf_table.csv
 /outputs/sample_financial_ratios.csv
@@ -75,7 +76,7 @@ CRDMO Analyst Copilot 是一个面向 ACC102 小组课程项目的 AI 股票研�
 
 - Streamlit 原型界面
 - 公司输入与 ticker 输入
-- 上传 CSV 或直接使用样例数据
+- 上传 CSV 或直接使用内置的药明康德历史真实数据
 - 自动计算历史财务比率
 - CRDMO 行业特定分析维度
 - 人工可修改的 DCF 假设
@@ -83,13 +84,14 @@ CRDMO Analyst Copilot 是一个面向 ACC102 小组课程项目的 AI 股票研�
 - 导出 Markdown / 文本格式结果
 - 提供多 Agent prompt 设计
 - 提供 Coze / XIPU AI 工作流设计文档
+- 提供药明康德历史数据来源说明文档
 
 ## Streamlit 工作流
 
 [app/streamlit_app.py](/Users/cyt/Desktop/lkh-/app/streamlit_app.py) 中的网页原型包含以下流程：
 
 1. 输入公司名称、ticker 和行业赛道
-2. 上传财务 CSV，或直接使用药明康德样例数据
+2. 上传财务 CSV，或直接使用内置的药明康德历史真实数据
 3. 自动计算历史收入增长、利润率、偿债和现金流指标
 4. 结合 CRDMO 行业特征做定性分析
 5. 由用户手动检查并修改 DCF 假设
@@ -141,7 +143,7 @@ streamlit run app/streamlit_app.py
 
 1. 先介绍目标用户是券商或买方研究员
 2. 展示药明康德案例输入
-3. 说明当前数据是样例数据
+3. 说明当前默认数据来自药明康德官方历史披露
 4. 展示历史财务分析图表
 5. 强调 CRDMO 行业专属判断维度
 6. 现场调整一两个 DCF 假设
@@ -159,7 +161,7 @@ streamlit run app/streamlit_app.py
 
 ## 局限性
 
-- 当前使用的是样例数据，不是最终真实财务数据
+- 当前已经内置药明康德真实历史数据，但仍需在正式提交中标注来源
 - DCF 模型做了简化
 - 没有接入实时股价、实时公告或实时数据库
 - 还没有加入可比公司估值法
@@ -169,7 +171,7 @@ streamlit run app/streamlit_app.py
 
 正式交作业前，建议你们再做几件事：
 
-- 把样例数据替换成核实后的药明康德真实数据
+- 在报告和演示中明确写出药明康德数据来源
 - 在报告和文档中加入数据来源引用
 - 在 GitHub 首页补上运行截图
 - 按照 [docs/demo_video_script.md](/Users/cyt/Desktop/lkh-/docs/demo_video_script.md:1) 录 3-5 分钟演示视频

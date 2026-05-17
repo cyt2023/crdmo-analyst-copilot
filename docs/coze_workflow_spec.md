@@ -47,22 +47,22 @@ Automated
 ### 2. Data Collection Node
 
 **Purpose**  
-Load the uploaded CSV or fallback sample dataset and validate required fields.
+Load the uploaded CSV or fallback bundled historical dataset and validate required fields.
 
 **Input**
 
 - workflow context object
-- uploaded file or sample data path
+- uploaded file or bundled historical data path
 
 **Output**
 
 - validated financial dataset
 - peer comparison table
-- data quality warning if sample data is being used
+- data quality warning plus source reminder if the bundled dataset is being used
 
 **Prompt**
 
-“Check whether the uploaded dataset contains the required CRDMO financial columns. If no file is uploaded, load the sample WuXi AppTec prototype dataset and label it clearly as sample demonstration data. Do not present sample data as audited or verified.”
+“Check whether the uploaded dataset contains the required CRDMO financial columns. If no file is uploaded, load the bundled WuXi AppTec historical dataset sourced from official company disclosures. Remind the user to cite the original filings and not to treat the dataset as a substitute for source verification.”
 
 **Automation Status**  
 Automated
@@ -110,7 +110,7 @@ Generate industry commentary tailored to the pharmaceutical CRDMO / CRO-CDMO sec
 
 **Prompt**
 
-“Act as an Industry Analyst Agent for the pharmaceutical CRDMO / CRO-CDMO industry. Explain demand drivers, outsourcing trends, backlog visibility, capacity utilisation, pricing discipline, margin resilience, and geopolitical or regulatory risks. Use only supplied facts. If a figure is not provided, do not invent it. Separate sample historical data from analyst interpretation.”
+“Act as an Industry Analyst Agent for the pharmaceutical CRDMO / CRO-CDMO industry. Explain demand drivers, outsourcing trends, backlog visibility, capacity utilisation, pricing discipline, margin resilience, and geopolitical or regulatory risks. Use only supplied facts. If a figure is not provided, do not invent it. Separate historical disclosed data from analyst interpretation.”
 
 **Automation Status**  
 Automated draft, then user review recommended
@@ -205,7 +205,7 @@ Combine the outputs into a final research-style report.
 
 **Prompt**
 
-“Act as a Report Editor Agent. Assemble the inputs into a coherent equity research briefing with sections for executive summary, industry analysis, company analysis, financial analysis, valuation analysis, key risks, and limitations. Use professional but student-friendly English. Preserve all labels for sample data and analyst assumptions.”
+“Act as a Report Editor Agent. Assemble the inputs into a coherent equity research briefing with sections for executive summary, industry analysis, company analysis, financial analysis, valuation analysis, key risks, and limitations. Use professional but student-friendly English. Preserve all labels for historical data, source limitations, and analyst assumptions.”
 
 **Automation Status**  
 Automated draft, optional final user review
@@ -249,11 +249,11 @@ Automated
 
 The most important manual checkpoints are:
 
-1. Confirm whether the data source is sample or verified
+1. Confirm whether the data source is the bundled historical dataset or a user-uploaded replacement
 2. Review historical results for reasonableness
 3. Edit forecast and valuation assumptions
 4. Review risk commentary before final export
-5. Ensure the final report clearly distinguishes fact, sample data, and assumptions
+5. Ensure the final report clearly distinguishes fact, source-based historical data, and assumptions
 
 ## Why This Workflow Fits Coze Or XIPU AI
 

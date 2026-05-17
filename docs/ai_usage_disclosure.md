@@ -18,13 +18,13 @@ Human team members remained responsible for:
 - selecting the target industry and case company
 - reviewing all financial logic and formulas
 - checking the appropriateness of CRDMO industry terminology
-- validating the distinction between sample data and verified data
+- validating the distinction between historical disclosed data and analyst assumptions
 - editing the final written submission and presentation
 - deciding the final assumptions, interpretations, and conclusions
 
 ## Data And Accuracy Disclosure
 
-The bundled financial figures in this repository are clearly labelled sample prototype data for demonstration only. They are not claimed to be audited, verified, or suitable for investment use. Final coursework submission should replace sample values with verified information from primary company disclosures or trusted databases if required by the course.
+The bundled WuXi AppTec historical figures in this repository were updated using official company disclosures for 2019-2023. They still require source cross-checking and proper citation in the final coursework submission, and the prototype remains unsuitable for direct investment use without independent verification.
 
 ## Academic Integrity Position
 
@@ -32,4 +32,4 @@ The final submitted work should reflect the group’s own understanding, review,
 
 ## Short Version For Slide Or Appendix
 
-“AI tools were used to support prototyping, prompt drafting, and documentation. All financial logic, assumptions, workflow choices, and final conclusions were reviewed and approved by the student team. Sample data in the prototype is for demonstration only and should be replaced with verified figures for final academic use where required.”
+“AI tools were used to support prototyping, prompt drafting, and documentation. All financial logic, assumptions, workflow choices, and final conclusions were reviewed and approved by the student team. Historical WuXi AppTec figures in the prototype were cross-checked against official company disclosures, while valuation assumptions and final interpretations remain the responsibility of the student team.”

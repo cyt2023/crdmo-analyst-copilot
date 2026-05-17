@@ -51,7 +51,7 @@ For the coursework demonstration, the default values are already set for WuXi Ap
 You may:
 
 - upload a CSV file with the required financial columns, or
-- use the bundled sample WuXi AppTec dataset
+- use the bundled WuXi AppTec verified historical dataset
 
 Required financial columns:
 
@@ -153,17 +153,17 @@ The user can export the generated output as:
 
 ## Recommended Classroom Demo Tips
 
-- Start with the sample data to reduce setup risk
-- Explain clearly that the dataset is only for prototype demonstration
+- Start with the bundled verified historical data to reduce setup risk
+- Explain clearly that the WuXi AppTec historical figures were taken from official disclosures, while peer data and assumptions remain prototype inputs
 - Change one assumption live, such as WACC or EBIT margin, to show how analyst judgement changes valuation
 - End by discussing limitations and next-step improvements
 
 ## Interpretation Guidance
 
 - Do not treat the output as investment advice
-- Do not treat the sample values as audited numbers
+- Do not treat the bundled values as a substitute for checking the original filings
 - Use the report as a workflow demonstration and analytical structure
-- Replace all sample numbers with verified figures before final coursework submission if your lecturer expects actual company data
+- Cite the original WuXi AppTec disclosures in your final coursework submission
 
 ## Common Issues
 

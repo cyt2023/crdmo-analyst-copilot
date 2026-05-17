@@ -25,7 +25,7 @@ Record a 3-5 minute demonstration showing that the project is a usable industry-
 
 ### 1:10-2:00 Data And Financial Analysis
 
-“Here on the left, we enter the company name, ticker, and industry segment. For this demonstration, we use the sample WuXi AppTec dataset included in the repository. We clearly label it as sample prototype data only, because the final submission should replace it with verified figures from annual reports or trusted financial databases.”
+“Here on the left, we enter the company name, ticker, and industry segment. For this demonstration, we use the bundled WuXi AppTec historical dataset included in the repository. These figures were updated from official company disclosures, so the prototype now uses real historical company data rather than invented sample numbers. Even so, analysts should still cite the underlying annual reports or official filings in the final submission.”
 
 “The system then calculates historical metrics such as revenue growth, gross margin, operating margin, net margin, current ratio, debt ratio, asset turnover, free cash flow margin, and backlog growth. These are shown in both a ratio table and charts, so the user can quickly understand the historical profile of the company.”
 
@@ -43,12 +43,12 @@ Record a 3-5 minute demonstration showing that the project is a usable industry-
 
 ### 4:00-4:30 Limitations And Conclusion
 
-“In conclusion, our project demonstrates a realistic equity research workflow for the CRDMO industry. Its strengths are industry fit, structured prompt design, human judgement checkpoints, and clear valuation logic. Its main limitations are that the bundled data is sample-only, the DCF is simplified, and the system does not include real-time market data or full source verification. In future work, we would add verified filings, peer multiple comparison, and stronger citation tracking.”
+“In conclusion, our project demonstrates a realistic equity research workflow for the CRDMO industry. Its strengths are industry fit, structured prompt design, human judgement checkpoints, and clear valuation logic. Its main limitations are that the DCF is simplified, the system does not include real-time market data, and analysts still need to verify sources and challenge assumptions. In future work, we would add peer multiple comparison, stronger citation tracking, and live data integration.”
 
 ## Presentation Tips
 
 - Keep the app open before recording starts
 - Zoom the browser so charts and tables are readable
 - Change one input live to show sensitivity
-- Keep reminding the audience that the bundled data is sample-only
+- Remind the audience that the bundled WuXi AppTec figures are historical real data, but the valuation assumptions are still analyst inputs
 - End with why human judgement still matters

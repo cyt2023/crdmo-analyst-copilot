@@ -33,17 +33,17 @@ def generate_report_markdown(
     latest = metrics_df.iloc[-1]
     latest_year = int(latest["year"])
 
-    markdown = f"""# CRDMO Analyst Copilot Sample Output
+    markdown = f"""# CRDMO Analyst Copilot Output Pack
 
 ## Project Context
 - Target company: {company_name} ({ticker})
 - Industry segment: {industry_segment}
-- Data status: Sample prototype dataset only. Replace with verified figures from annual reports or trusted databases before academic submission or investment use.
+- Data status: Historical WuXi AppTec figures in this pack are based on official company disclosures for 2019-2023. Analysts should still independently cross-check source filings and cite them in final coursework submission.
 
 ## Executive Summary
-CRDMO Analyst Copilot is a prototype equity research valuation workflow for brokerage-style coverage of pharmaceutical outsourcing companies. For this sample run on {company_name}, the system combines historical sample data analysis, analyst-reviewed assumptions, and a simplified DCF model to produce an indicative fair value per share of {_format_share_value(valuation_outputs['fair_value_per_share'])}.
+CRDMO Analyst Copilot is a prototype equity research valuation workflow for brokerage-style coverage of pharmaceutical outsourcing companies. For this run on {company_name}, the system combines verified historical company disclosures, analyst-reviewed assumptions, and a simplified DCF model to produce an indicative fair value per share of {_format_share_value(valuation_outputs['fair_value_per_share'])}.
 
-The latest sample year in the prototype is {latest_year}. Revenue is {_format_currency(latest['revenue'])}, operating margin is {_format_percent(latest['operating_margin'])}, and backlog is {_format_currency(latest['backlog'])}. The workflow is designed to automate repetitive calculations while preserving human checkpoints for assumptions, risk judgement, and final report editing.
+The latest historical year in the prototype is {latest_year}. Revenue is {_format_currency(latest['revenue'])}, operating margin is {_format_percent(latest['operating_margin'])}, and backlog is {_format_currency(latest['backlog'])}. The workflow is designed to automate repetitive calculations while preserving human checkpoints for assumptions, risk judgement, and final report editing.
 
 ## Industry Analysis
 {narrative_sections['industry_analysis']}
@@ -78,7 +78,7 @@ Key valuation outputs:
 {narrative_sections['risk_review']}
 
 ## Limitations
-- This prototype uses sample, clearly labelled non-audited data for demonstration.
+- This prototype uses verified historical company disclosures for WuXi AppTec, but peers and forward assumptions still require analyst validation.
 - The DCF model is simplified and uses NOPAT or an optional FCF margin as a proxy for free cash flow.
 - Valuation outputs are highly sensitive to WACC, terminal growth, and margin assumptions.
 - The workflow does not include real-time market data, current share price benchmarking, or live regulatory news.
@@ -160,7 +160,7 @@ def build_narrative_sections(
     )
 
     risk_review = (
-        "The most important risks in this prototype are assumption sensitivity, sample data limitations, "
+        "The most important risks in this prototype are assumption sensitivity, source interpretation risk, "
         "and sector-specific uncertainty. CRDMO valuations can change quickly if biotech funding weakens, "
         "regulatory scrutiny intensifies, overseas customer sentiment shifts, or newly built capacity is "
         "underutilised. Human analyst review remains necessary to validate source data, challenge management "

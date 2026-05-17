@@ -21,13 +21,13 @@ This repository is intended to show how an industry-focused AI workflow can supp
 
 ## Important Data Disclaimer
 
-The bundled WuXi AppTec dataset is **sample prototype data only** for demonstration. It is not presented as audited, verified, or investment-grade data.
+The bundled WuXi AppTec dataset now contains **verified historical figures for 2019-2023 sourced from official company disclosures**. It is suitable for coursework prototyping, but you should still independently cross-check the original filings before final submission or any real investment use.
 
-Before final coursework submission, you should replace the sample figures with verified data from:
+Key source types used or recommended for cross-checking include:
 
 - WuXi AppTec annual reports
-- Interim reports or investor presentations
-- Trusted financial databases
+- WuXi AppTec interim or quarterly reports
+- Official annual results presentations
 - Official exchange filings
 
 ## Repository Structure
@@ -46,6 +46,7 @@ Before final coursework submission, you should replace the sample figures with v
 /docs/demo_video_script.md
 /docs/coze_workflow_spec.md
 /docs/ai_usage_disclosure.md
+/docs/wuxi_data_sources.md
 /outputs/sample_output_pack.md
 /outputs/sample_dcf_table.csv
 /outputs/sample_financial_ratios.csv
@@ -55,7 +56,7 @@ Before final coursework submission, you should replace the sample figures with v
 ## Features
 
 - Streamlit interface with a landing page and company input form
-- Sample data mode or CSV upload mode
+- Verified historical WuXi dataset mode or CSV upload mode
 - Historical financial ratio analysis
 - CRDMO-specific qualitative analysis inputs
 - Analyst-editable DCF assumptions
@@ -63,13 +64,14 @@ Before final coursework submission, you should replace the sample figures with v
 - Markdown/text report export
 - Prompt library for agent roles
 - Coze / XIPU-AI-ready workflow documentation
+- WuXi AppTec source note for the bundled historical dataset
 
 ## Streamlit App Workflow
 
 The Streamlit app in [app/streamlit_app.py](/Users/cyt/Desktop/lkh-/app/streamlit_app.py) follows the required workflow:
 
 1. Analyst enters company name, ticker, and industry segment
-2. Analyst uploads a CSV or uses the bundled sample WuXi AppTec dataset
+2. Analyst uploads a CSV or uses the bundled WuXi AppTec historical dataset
 3. System calculates historical growth, margin, liquidity, leverage, efficiency, and cash flow ratios
 4. Analyst reviews CRDMO operating signals such as demand, utilisation, and risk factors
 5. Analyst sets or edits DCF assumptions
@@ -120,7 +122,7 @@ streamlit run app/streamlit_app.py
 
 1. Open the landing page and explain the target users.
 2. Show the company input section for WuXi AppTec.
-3. Use the sample dataset to demonstrate the workflow.
+3. Use the bundled verified historical dataset to demonstrate the workflow.
 4. Walk through the historical ratio analysis.
 5. Explain why CRDMO-specific qualitative factors matter.
 6. Adjust one or two DCF assumptions live.
@@ -130,7 +132,7 @@ streamlit run app/streamlit_app.py
 
 ## Limitations
 
-- Uses sample data rather than verified real figures
+- Uses verified historical WuXi AppTec figures, but still relies on simplified modelling assumptions
 - Uses a simplified DCF structure
 - Does not connect to real-time APIs or live market data
 - Does not automate full source verification
@@ -141,7 +143,7 @@ streamlit run app/streamlit_app.py
 
 Before submitting, your group should:
 
-- Replace sample numbers with verified WuXi AppTec figures
+- Add explicit source citations for the bundled WuXi AppTec figures
 - Add citations to annual reports and trusted databases
 - Tailor the final language to your lecturer’s marking rubric
 - Add screenshots from your running Streamlit app

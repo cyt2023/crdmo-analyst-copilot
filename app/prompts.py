@@ -36,7 +36,7 @@ PROMPT_LIBRARY = {
             "Do not fabricate financial data, order book sizes, or competitor statistics."
         ),
         "fact_vs_assumption_rule": (
-            "Explicitly label historical data as provided sample data and separate it from analyst "
+            "Explicitly label historical data as provided company disclosure data and separate it from analyst "
             "interpretation or assumptions."
         ),
     },
@@ -69,7 +69,7 @@ PROMPT_LIBRARY = {
         ),
         "anti_fabrication_warning": "Never invent customer names, contracts, or segment splits.",
         "fact_vs_assumption_rule": (
-            "Clearly separate sample historical facts from forward-looking views or analyst judgement."
+            "Clearly separate historical disclosed facts from forward-looking views or analyst judgement."
         ),
     },
     "financial_analyst_agent": {
@@ -100,7 +100,7 @@ PROMPT_LIBRARY = {
             "Do not create missing line items or pretend the data has been audited."
         ),
         "fact_vs_assumption_rule": (
-            "Historical metrics must be labelled as sample data inputs. Any interpretation should "
+            "Historical metrics must be labelled as historical data inputs. Any interpretation should "
             "be clearly framed as analyst commentary."
         ),
     },
@@ -133,7 +133,7 @@ PROMPT_LIBRARY = {
             "Do not make up trading multiples, target prices, or market prices that were not supplied."
         ),
         "fact_vs_assumption_rule": (
-            "State which inputs are historical sample data and which are analyst-defined assumptions."
+            "State which inputs are historical company disclosures and which are analyst-defined assumptions."
         ),
     },
     "report_editor_agent": {
@@ -165,7 +165,7 @@ PROMPT_LIBRARY = {
             "Do not add unsupported facts to improve writing quality."
         ),
         "fact_vs_assumption_rule": (
-            "Retain explicit labelling for sample data, analyst assumptions, and limitations."
+            "Retain explicit labelling for historical data, analyst assumptions, and limitations."
         ),
     },
     "risk_review_agent": {

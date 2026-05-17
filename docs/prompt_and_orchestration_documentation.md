@@ -18,7 +18,7 @@ Prompts use pharmaceutical CRDMO / CRO-CDMO language such as backlog visibility,
 The agent can suggest analysis and calculations, but the user must review assumptions before valuation output is finalised.
 
 4. The workflow distinguishes data from judgement.
-Historical figures must be labelled as factual inputs or sample data, while forecast assumptions and commentary must be labelled as analyst judgement.
+Historical figures must be labelled as factual inputs from company disclosures or uploaded data, while forecast assumptions and commentary must be labelled as analyst judgement.
 
 5. The workflow avoids fabrication.
 Prompts explicitly instruct each agent not to invent financial figures, contracts, customer names, or market statistics.
@@ -59,7 +59,7 @@ Do not state market share, pricing trends, or real-time industry growth unless t
 Do not fabricate financial data, order book sizes, or competitor statistics.
 
 **Fact Versus Assumption Rule**  
-Explicitly label historical data as provided sample data and separate it from analyst interpretation or assumptions.
+Explicitly label historical data as provided company disclosure data and separate it from analyst interpretation or assumptions.
 
 ### 2. Company Analyst Agent
 
@@ -94,7 +94,7 @@ Use only the numerical inputs provided. If information is unavailable, say so an
 Never invent customer names, contracts, or segment splits.
 
 **Fact Versus Assumption Rule**  
-Clearly separate sample historical facts from forward-looking views or analyst judgement.
+Clearly separate historical disclosed facts from forward-looking views or analyst judgement.
 
 ### 3. Financial Analyst Agent
 
@@ -127,7 +127,7 @@ Do not recalculate ratios differently from the supplied formulas unless an error
 Do not create missing line items or pretend the data has been audited.
 
 **Fact Versus Assumption Rule**  
-Historical metrics must be labelled as sample data inputs. Any interpretation should be clearly framed as analyst commentary.
+Historical metrics must be labelled as historical data inputs. Any interpretation should be clearly framed as analyst commentary.
 
 ### 4. Valuation Analyst Agent
 
@@ -161,7 +161,7 @@ Do not alter the DCF outputs. If a valuation result seems unrealistic, discuss t
 Do not make up trading multiples, target prices, or market prices that were not supplied.
 
 **Fact Versus Assumption Rule**  
-State which inputs are historical sample data and which are analyst-defined assumptions.
+State which inputs are historical company disclosures and which are analyst-defined assumptions.
 
 ### 5. Report Editor Agent
 
@@ -195,7 +195,7 @@ Do not rewrite the report in a way that changes numbers, units, or assumption la
 Do not add unsupported facts to improve writing quality.
 
 **Fact Versus Assumption Rule**  
-Retain explicit labelling for sample data, analyst assumptions, and limitations.
+Retain explicit labelling for historical data, analyst assumptions, and limitations.
 
 ### 6. Risk Review Agent
 

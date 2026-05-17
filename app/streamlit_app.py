@@ -65,7 +65,7 @@ def render_landing_page() -> None:
 This prototype is designed for brokerage equity research analysts covering pharmaceutical CRDMO and CRO-CDMO companies.
 It demonstrates an end-to-end workflow across company intake, data preparation, historical financial analysis, human-reviewed valuation assumptions, DCF modelling, and report generation.
 
-Important note: the bundled WuXi AppTec dataset is a clearly labelled sample dataset for demonstration only. Replace it with verified figures from annual reports, company filings, or trusted databases before final submission or any real investment use.
+Important note: the bundled WuXi AppTec dataset now uses verified historical figures from official company disclosures for 2019-2023. Peer data and valuation assumptions remain prototype inputs and should still be reviewed before final submission or investment use.
 """
     )
 
@@ -95,7 +95,7 @@ def render_ratio_chart(metrics_df: pd.DataFrame) -> None:
         )
         .properties(height=320)
     )
-    st.altair_chart(chart, use_container_width=True)
+    st.altair_chart(chart, width="stretch")
 
 
 def render_revenue_chart(metrics_df: pd.DataFrame) -> None:
@@ -109,7 +109,7 @@ def render_revenue_chart(metrics_df: pd.DataFrame) -> None:
         )
         .properties(height=320)
     )
-    st.altair_chart(chart, use_container_width=True)
+    st.altair_chart(chart, width="stretch")
 
 
 def render_fcf_chart(dcf_df: pd.DataFrame) -> None:
@@ -123,7 +123,7 @@ def render_fcf_chart(dcf_df: pd.DataFrame) -> None:
         )
         .properties(height=320)
     )
-    st.altair_chart(chart, use_container_width=True)
+    st.altair_chart(chart, width="stretch")
 
 
 def main() -> None:
@@ -140,7 +140,7 @@ def main() -> None:
         uploaded_file = st.file_uploader(
             "Upload financial CSV",
             type=["csv"],
-            help="If no file is uploaded, the sample WuXi AppTec prototype dataset is used.",
+            help="If no file is uploaded, the bundled WuXi AppTec verified historical dataset is used.",
         )
 
     financial_source = uploaded_file if uploaded_file is not None else SAMPLE_FINANCIALS_PATH
@@ -153,10 +153,10 @@ def main() -> None:
 
     st.subheader("Data Collection")
     st.info(
-        "This run is using sample prototype data unless you uploaded a replacement CSV. "
-        "Do not present the bundled figures as verified financial statements."
+        "This run is using bundled WuXi AppTec historical data sourced from official company disclosures unless you uploaded a replacement CSV. "
+        "Please still cross-check the figures and cite the underlying filings in your final submission."
     )
-    st.dataframe(financial_df, use_container_width=True)
+    st.dataframe(financial_df, width="stretch")
 
     st.subheader("Historical Financial Analysis")
     metric_cols = st.columns(4)
@@ -178,7 +178,7 @@ def main() -> None:
             "backlog_growth",
         ],
     )
-    st.dataframe(display_ratio_df, use_container_width=True)
+    st.dataframe(display_ratio_df, width="stretch")
 
     chart_cols = st.columns(2)
     with chart_cols[0]:
@@ -224,7 +224,7 @@ def main() -> None:
         st.metric("Automated backlog growth", f"{summary.latest_backlog_growth:.1%}")
 
     st.markdown("Sample peer context")
-    st.dataframe(peer_df, use_container_width=True)
+    st.dataframe(peer_df, width="stretch")
 
     st.subheader("Human-in-the-Loop Valuation Assumption Setting")
     st.caption(
@@ -367,7 +367,7 @@ def main() -> None:
     )
 
     st.markdown("DCF forecast table")
-    st.dataframe(format_dcf_table(dcf_df), use_container_width=True)
+    st.dataframe(format_dcf_table(dcf_df), width="stretch")
 
     dcf_chart_col, sensitivity_col = st.columns(2)
     with dcf_chart_col:
@@ -375,7 +375,7 @@ def main() -> None:
         render_fcf_chart(dcf_df)
     with sensitivity_col:
         st.markdown("Valuation sensitivity table")
-        st.dataframe(sensitivity_df.round(2), use_container_width=True)
+        st.dataframe(sensitivity_df.round(2), width="stretch")
 
     st.subheader("Output Generation")
     assumptions = {
